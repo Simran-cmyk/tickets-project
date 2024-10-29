@@ -3,8 +3,8 @@ import { Button, Image, Snippet } from '@nextui-org/react'
 import { prepareContractCall, PreparedTransaction, toTokens } from 'thirdweb'
 import { useActiveAccount, useSendAndConfirmTransaction, useWalletBalance } from 'thirdweb/react'
 import { polygonAmoy } from 'thirdweb/chains'
-import { getTicketsContractByAddress } from '@/utils/contracts'
-import { ticketsContract } from '@/utils/contractsUrl'
+import { getTicketsContractByAddress } from '../utils/contracts'
+import { ticketsContract } from '../utils/contractsUrl'
 import { thirdWebClient } from './ConnectWallet'
 export type Event = [
     string,

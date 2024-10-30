@@ -1,1 +1,1 @@
-export const ticketsContract = '0x9EaA03019056A6A18ef389FEB09070d83Ad8dc35';
+export const ticketsContract = '0x848FED04Ef82Db71705690347DFD5aa59E61F2a9';

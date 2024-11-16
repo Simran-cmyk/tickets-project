@@ -6,6 +6,7 @@ import { useSendAndConfirmTransaction } from 'thirdweb/react';
 import { prepareContractCall, PreparedTransaction, toUnits } from 'thirdweb';
 import { getTicketsContractByAddress } from '@/utils/contracts';
 import { ticketsContract } from '@/utils/contractsUrl';
+import { useRouter } from 'next/navigation';
 
 
 function CreateTicketPage() {
@@ -17,6 +18,7 @@ function CreateTicketPage() {
     const [availableTickets,setAvailableTickets]=React.useState(0)
     const [uploading, setUploading] = React.useState(false);
     const {mutateAsync:sendCreateEventTransaction}= useSendAndConfirmTransaction()
+    const router = useRouter()
 
 
     const uploadImage = async () => {
@@ -87,10 +89,12 @@ function CreateTicketPage() {
                         onSuccess(){
                            
                             alert('Event created successfully')
+
                         }
                     })
                 }
                 setUploading(false)
+                router.push('/')
             }
             catch(e){
                 console.log(e)
